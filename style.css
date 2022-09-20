@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.display{
+    display: none;
+}
+
+table, th, td {
+    border: 1px solid black;
+}

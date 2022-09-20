@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="Application.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+    <title>Banco</title>
+</head>
+<body>
+    <div id="menu">
+        <input type="button" id="criaConta" value="Cria Conta">
+        <input type="button" id="fazTransf" value="Fazer Transferencia">
+        <input type="button" id="sacaDep" value="Sacar e Depositar">
+        <input type="button" id="retExtr" value="Retirar Extrato">
+        <input type="button" id="avMes" value="Avanca Mes">
+    </div>
+
+    <div id="cadastro" class="display">
+        <p>Cod: <input type="text" id="cadCod"></p>
+        <p>Nome: <input type="text" id="cadValor"></p>
+        <label for="tipo">Tipo:</label>
+        <select name="tipo" id="cadTipo">
+            <option value="basica">Basico</option>
+            <option value="estudante">Estudante</option>
+            <option value="platinum">Platinum</option>
+        </select><br><br>
+        <input type="button" id="cadButton" value="Confirma">
+    </div>
+
+    <div id="transferencia" class="display">
+        <p>Conta Origem: <input type="text" id="ccodOrigem" placeholder="Codigo"></p>
+        <p>Conta destino: <input type="text" id="ccodDestino" placeholder="Codigo"></p>
+        <p>Valor: <input type="text" id="transfValor"></p>
+        <input type="button" id="transfBtt" value="OK">
+    </div>
+
+    <div id="saqDep" class="display">
+        <p>Conta:<input type="text" id="sdcodOrigem" placeholder="Codigo"></p>
+        <p>Valor: <input type="text" id="sdValor" placeholder="valor"></p>
+        <div>
+            <label for="depRadio">Deposita</label>
+            <input type="radio" id="depRadio" name="radio">
+            <label for="saqRadio">Saque</label>
+            <input type="radio" id="saqRadio" name="radio">
+        </div>
+        <input type="button" id="sdBtt" value="OK">
+    </div>
+    <div id="extrato" class="display">
+        <p>Codigo: <input type="text" id="extCod"></p>
+        <input type="button" id="extOK" value="busca">
+        <table id="extrTb">
+            <tr>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+              </tr>
+              <tbody id="historico">
+
+              </tbody>
+        </table>
+    </div>
+</body>
+</html>
